@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="utf-8">
+       <meta content='width=400, initial-scale=0.80, maximum-scale=0.80,minimum-scale=0.80' name='viewport' />
+       <title>Tree in Net</title>
+       <link rel="stylesheet" type="text/css" href="style.css?1">
+       <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABELAAARCwAAAAAAAAAAAAAAAAAAAAAAAAAAAABNfyUATX8lAU1/JRdNfyVATX8lW01/JVpNfyU+TX8lFU1/JQFNfyUAAAAAAAAAAAAAAAAAAAAAAE1/JQBNfyUATX8lHE1/JX5NfyXQTX8l6E1/JedNfyXoTX8l6E1/Jc1NfyV5TX8lGU1/JQBNfyUAAAAAAE1/JQBNfyUATX8lPE1/JclNfyXVTX8lhU1/JUhNfyUwTX8lMU1/JUxNfyWLTX8l2U1/JcRNfyU1TX8lAE1/JQBNfyUATX8lNU1/JdBNfyWQTX8lHE1/JQBNfyUAAAAAAAAAAABNfyUATX8lAE1/JSJNfyWcTX8lzU1/JS1NfyUATX8lEk1/Ja9NfyV7TX8lBk1/JQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABNfyUATX8lCU1/JYlNfyWpTX8lDU1/JWRNfyWaToAlCQAAAAEAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMP/XgBNfyUPTX8lpU1/JVlNfyWeTX8lOGSmMAAAAAAXAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAPaa0yAE1/JUVNfyWaTX8ljlaOKQkAAAARAAAALQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAA9ShycPTX8llU1/JWcLEgUAAAAANAAAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAuAAAAAE1/JXJNfyVJFiQLAAAAAE4AAAAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAASAAAAABNfyVTTX8lLwAAAAAAAABUAAAASQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPQAAAFEAAAAATX8lOE1/JREAAAAAAAAANAAAAIoAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAH0AAAA1///WAU1/JRdNfyUBAAAAAAAAAAcAAACTAAAAZgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAFsAAACRAAAACP//lgBNfyUCAAAAAAAAAAAAAAAAAAAAJQAAALIAAACKAAAALgAAABAAAAAPAAAAKwAAAIMAAACvAAAAJwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAjgAAAMMAAAC9AAAAvAAAAMEAAACOAAAAIQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAAAjAAAARQAAAEUAAAAjAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA8A8AAOAHAADAAwAAh+EAAA/wAAAH+AAAJ+QAAA/wAABP8gAAT/IAAE/yAABH4AAAQ8IAAOAHAADwDwAA+B8AAA==" />
+</head>
+<body>
+
+<div class="content">
+       <div class="show" id="show">
+              <div class="in enter" id="enter">
+              <h1>Tree in Net</h1>
+              <img id="logo" src="images/tree-in-net.png" alt="Logo">
+              <input type="text" id="login" value="Your E-mail"/><br>
+              <input type="checkbox" id="loginSave"> <label for="loginSave">Save</label>
+              <p id="bottom">
+              <input type="button" value="My Tree" id="doEnter">
+              </p>
+              </div>
+
+              <div class="in tree hide" id="tree">
+
+                     <div id="tree-header">
+                            <div id="lavel">
+                                   <span id="geniration">0</span><br>
+                                   <sup>Generation</sup>
+                            </div>
+                            <span id="title"></span>
+                            <div id="menu"><!--≡--></div>
+                     </div>
+
+                     <div id="tree-body">
+                            <span id="activity" class="vhide"></span>
+                            <p id="born"></p>
+                            <span id="children_text">Children</span><br>
+
+                            <div id="scroll_child">
+
+                                   <div class="children" id="move_child">
+                                   <span  id="children"  class="noselect">
+
+                                   </span>
+                                   <span id="add_child"></span>
+                                   </div>
+                                   <p id="left_child">«</p><p id="right_child">»</p>
+                            </div>
+
+
+                            <p id="i">
+                                   <span id="partner" class="padd"></span><br><br>
+                                   <span id="partner_name"></span>
+                                   <span id="other_partner" class="vhide"></span>
+                            </p>
+                            <div id="parents">
+
+                                   <p id="mother" class="mother none"></p>
+                                   <p id="father" class="father none"></p>
+
+                                  <p id="mother-parents">
+                                  <!-- <span id="m-parents-x" class="padd ppx"></span>
+                                   <span id="m-parents-y" class="padd ppy"></span>
+                                    -->
+                                   </p>
+                                   <p id="father-parents">
+                                   <!--<img src="images/none.png" alt="Add">
+                                   <img src="images/none.png" alt="Add">
+-->
+                                 </p>
+
+                            </div>
+                            <div id="other">
+
+
+                                   <div class="sib_x">
+
+                                          <span  id="sib_add_x" class="sib_add vhide"></span>
+                                          <div class="scroll_sibxy" id="move_sibx">
+                                                 <span class="scroll_auto" id="sibx"></span>
+                                          </div>
+                                          <p id="up_sibx">▲</p><p id="down_sibx">▼</p>
+                                   </div>
+
+                                   <div class="sib_y">
+                                          <span id="sib_add_y" class="sib_add vhide"></span>
+
+                                          <div class="scroll_sibxy" id="move_siby">
+                                                 <div class="scroll_auto" id="siby"></div>
+                                          </div>
+                                          <p id="up_siby">▲</p><p id="down_siby">▼</p>
+                                   </div>
+                                   <span id="text_sibling" class="vhide">Brothers and sisters</span>
+
+                                          <div id="scroll_sib">
+
+                                                 <div class="sibling" id="move_sibling">
+                                                 <span  id="sibling">
+
+                                                 </span>
+                                                 <span id="add_sibling" class="vhide"></span>
+                                                  </div>
+                                                 <p id="left_sibling">«</p><p id="right_sibling">»</p>
+                                          </div>
+
+
+                            </div>
+
+                     </div>
+                     <div id="tree-edit" class="hide">
+
+                           <label for="edit_name">Name</label>
+                           <input type="text" id="edit_name"><br>
+                           <label for="edit_surname">Surname</label>
+                           <input type="text" id="edit_surname"><br>
+                           <div id="div_bornname">
+                           <label for="edit_surname">Bornname</label>
+                           <input type="text" id="edit_bornname"><br>
+                           </div>
+                           <label for="edit_born">Date of Birth</label>
+                           <input type="text" id="edit_born"><br>
+                           <label for="edit_place">Place of Birth</label>
+                           <input type="text" id="edit_place"><br>
+                           <label for="edit_activity">Activity</label>
+                           <input type="text" id="edit_activity"><br>
+
+                           <br>
+                           <div class="radio-xy">
+                                   <input type="radio" id="radiox" name="sex" value="x">
+                                   <label for="radiox" class="mother">Female</label>
+
+                                   <input type="radio" id="radioy" name="sex" value="y">
+                                   <label for="radioy" class="father">Male</label>
+                                   </div><br>
+                                   <p id="extras_title">Extras</p>
+                                   <p id="extras">»</p>
+                            </div>
+
+                     <div id="extras_place" class="extras_place hide"><br><br>
+                            <label for="edit_e-mail">E-mail</label>
+                            <input type="text" id="edit_e-mail"><br><br>
+                            <br>
+                     </div>
+
+                     <div id="tree-footer">
+                            <input type="button" value="Edit" id="action" data-id="edit"><br>
+                     </div>
+              </div>
+       </div>
+</div>
+<script type="text/javascript" src="js/main.js?1"></script>
+</body>
+</html>
